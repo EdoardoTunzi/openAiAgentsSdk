@@ -1,5 +1,4 @@
 from dotenv import load_dotenv
-import os
 from agents import Agent, Runner, function_tool, SQLiteSession
 import asyncio
 from pydantic import BaseModel, Field
@@ -10,7 +9,6 @@ Il company directory agent è un semplice agente che fornisce numeri di telefono
 L'hr_agent gestisce richieste di ferie e saldo ferie tramite i tool get_remaining_vacation_days e request_vacation."""
 
 load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
 session = SQLiteSession("handoffs_conversation")
 
 
